@@ -1,9 +1,18 @@
 # Hướng dẫn chung:
+- [Yêu cầu chung](#yêu-cầu)
 - [Cài đặt trên localhost](#cài-đặt-trên-localhost)
 - [Dockerize ứng dụng](#dockerize-ứng-dụng)
 
+## Yêu cầu chung:
+\\Đối với cách triển khai này, chúng ta sử dụng:
+- Node phiên bản 18.16.1.
+- Trình quản lý gói Node.js là npm đi kèm có phiên bản 9.7.2.
+- Cơ sở dữ liệu là MySQL phiên bản 8.0.
+- Nếu có thêm dockerize ứng dụng thì cài thêm Docker Desktop.
+- Trình soạn thảo, ở đây ta dùng trình soạn thảo Visual Studio Code.
+
 ## Cài đặt trên localhost:
-**Bước 1:** Mở Visual Studio Code, chạy câu lệnh:
+**Bước 1:** Mở terminal của Visual Studio Code lên, chạy câu lệnh:
 ```bash
 npx create-strapi-app@latest strapi-project
 ```
@@ -33,13 +42,11 @@ npm run develop
 **Bước 7:** Đăng ký và đăng nhập vào ứng dụng. Hoàn tất việc cài đặt và chạy Strapi trên localhost.
 
 ## Dockerize ứng dụng:
-**Prerequisites:**
-- Dự án Strapi đã có sẵn (nếu chưa có, thực hiện các bước ở [đây] để tạo dự án mới).
-- Docker Desktop
+*Ở phần này, chúng ta thực hiện dockerize ứng dụng đã có sẵn bằng cài đặt trên localhost. Nếu chưa có ứng dụng, thực hiện cài đặt mới ứng dụng tại [đây](#cài-đặt-trên-localhost)*
 
 **Bước 1:** Mở Docker Desktop lên để khởi động dịch vụ.
 
-**Bước 2:** Pull image của MySQL về theo câu lệnh:
+**Bước 2:** Trong terminal của Visual Studio Code, pull image của MySQL về theo câu lệnh:
 ```bash
 docker pull mysql:latest
 ```
@@ -128,6 +135,7 @@ data/
 **Bước 4:** Sửa đổi các file với mã nguồn như sau:
 
 Ở thư mục strapi-project, file .env thêm một dòng mã nguồn: NODE_ENV=development.
+
 Vào tìm file database.js theo đường dẫn strapi-project/config/database.js, chỉnh sửa dòng mã nguồn:
 ```javascript
 const client = env('DATABASE_CLIENT', 'sqlite');
