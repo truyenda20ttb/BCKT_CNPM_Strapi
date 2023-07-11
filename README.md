@@ -39,7 +39,7 @@ Với:
 cd strapi-project
 npm run develop
 ```
-**Bước 7:** Đăng ký và đăng nhập vào ứng dụng. Hoàn tất việc cài đặt và chạy Strapi trên localhost.
+**Bước 7:** Đăng ký và đăng nhập vào ứng dụng.
 
 ## Dockerize ứng dụng:
 *Ở phần này, chúng ta thực hiện dockerize ứng dụng đã có sẵn bằng cài đặt trên localhost. Nếu chưa có ứng dụng, thực hiện cài đặt mới ứng dụng tại [đây](#cài-đặt-trên-localhost)*
@@ -134,7 +134,10 @@ data/
 
 **Bước 4:** Sửa đổi các file với mã nguồn như sau:
 
-Ở thư mục strapi-project, file .env thêm một dòng mã nguồn: NODE_ENV=development.
+Ở thư mục strapi-project, file .env thêm một dòng mã nguồn:
+```bash
+NODE_ENV=development
+```
 
 Vào tìm file database.js theo đường dẫn strapi-project/config/database.js, chỉnh sửa dòng mã nguồn:
 ```javascript
@@ -149,4 +152,9 @@ const client = env('DATABASE_CLIENT', 'mysql');
 ```bash
 docker-compose up -d
 ```
-**Bước 6:** Truy cập theo đường dẫn http://localhost:1337/
+**Bước 6 (không bắt buộc):** Kiểm tra kết nối đến cơ sở dữ liệu MySQl
+Vào MySQL Workbench, chọn New Connection.\\
+Nhập các thông tin như đẫ thiết lập trong file docker-compose.yml và đặt tên cho kết nối.\\
+Kiểm tra\\
+Nhấn vào kết nối, ta thấy cơ sở dữ liệu dbStrapi đã được tạo sẵn qua quá trình xây dựng container, nghĩa là thiết lập thành công.\\
+**Bước 7:** Truy cập theo đường dẫn http://localhost:1337/, thực hiện tạo tài khoản và đăng nhập vào ứng dụng.
