@@ -4,7 +4,7 @@
 - [Dockerize ứng dụng](#dockerize-ứng-dụng)
 
 ## Yêu cầu chung:
-\\Đối với cách triển khai này, chúng ta sử dụng:
+\Đối với cách triển khai này, chúng ta sử dụng:
 - Node phiên bản 18.16.1.
 - Trình quản lý gói Node.js là npm đi kèm có phiên bản 9.7.2.
 - Cơ sở dữ liệu là MySQL phiên bản 8.0.
@@ -153,8 +153,12 @@ const client = env('DATABASE_CLIENT', 'mysql');
 docker-compose up -d
 ```
 **Bước 6 (không bắt buộc):** Kiểm tra kết nối đến cơ sở dữ liệu MySQl
-Vào MySQL Workbench, chọn New Connection.\\
-Nhập các thông tin như đẫ thiết lập trong file docker-compose.yml và đặt tên cho kết nối.\\
-Kiểm tra\\
-Nhấn vào kết nối, ta thấy cơ sở dữ liệu dbStrapi đã được tạo sẵn qua quá trình xây dựng container, nghĩa là thiết lập thành công.\\
+Vào MySQL Workbench, chọn New Connection.  
+
+Nhập các thông tin như đẫ thiết lập trong file docker-compose.yml và đặt tên cho kết nối.  
+
+Kiểm tra  
+
+Nhấn vào kết nối, ta thấy cơ sở dữ liệu dbStrapi đã được tạo sẵn qua quá trình xây dựng container, nghĩa là thiết lập thành công.  
+
 **Bước 7:** Truy cập theo đường dẫn http://localhost:1337/, thực hiện tạo tài khoản và đăng nhập vào ứng dụng.
