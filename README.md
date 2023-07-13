@@ -23,34 +23,36 @@ Với:
 - `strapi-project`: là tên của dự án Strapi của bạn.
 
 **Bước 2:** Xuất hiện thông báo, gõ `y`, nhấn Enter.
-![Hình](illusimage/localhostimg/image2.png)
+![Hình](illusimage/localhostimg/image2.png)  
+
 **Bước 3:** Thiết lập:
-- Chọn "Custom (manual settings)"
-![Alt text](illusimage/localhostimg/image3.png)
-- Chọn "JavaScript"
-![Alt text](illusimage/localhostimg/image4.png)
-- Chọn "mysql"
-![Alt text](illusimage/localhostimg/image5.png)
-- Đặt tên cho cơ sở dữ liệu và thiết lập các thông số cho cơ sở dữ liệu.
-![Alt text](illusimage/localhostimg/image6.png)
-![Alt text](illusimage/localhostimg/image7.png)
-- Màn hình hiện ra sau khi thiết lập
-![Alt text](illusimage/localhostimg/image8.png)
+- Chọn "Custom (manual settings)"  
+![Alt text](illusimage/localhostimg/image3.png)  
+- Chọn "JavaScript"  
+![Alt text](illusimage/localhostimg/image4.png)  
+- Chọn "mysql"  
+![Alt text](illusimage/localhostimg/image5.png)  
+- Đặt tên cho cơ sở dữ liệu và thiết lập các thông số cho cơ sở dữ liệu  
+![Alt text](illusimage/localhostimg/image6.png)  
+![Alt text](illusimage/localhostimg/image7.png)  
+- Màn hình hiện ra sau khi thiết lập  
+![Alt text](illusimage/localhostimg/image8.png)  
+
 **Bước 4:** Cài đặt MySQL (tải tại [đây](https://dev.mysql.com/downloads/file/?id=518835)) và thiết lập cấu hình cơ sở dữ liệu  
 Tất cả để giá trị mặc định ngoại trừ các thông số sau:  
--	Authentication Method: chọn "Use Legacy Authentication Method"
-![Hình](./illusimage/localhostimg/image10.png)
-- Accounts and Roles: mật khẩu tài khoản root nhập tùy ý; sau đó chọn "Add User" -> nhập username là userStrapi, mật khẩu là user123
-![Hình](./llusimage/localhostimg/image11.png)
+-	Authentication Method: chọn "Use Legacy Authentication Method"  
+![Hình](./illusimage/localhostimg/image10.png)  
+- Accounts and Roles: mật khẩu tài khoản root nhập tùy ý; sau đó chọn "Add User" -> nhập username là userStrapi, mật khẩu là user123  
+![Hình](./illusimage/localhostimg/image11.png)  
 
-**Bước 5:** Kết nối cơ sở dữ liệu
-Mở MySQL Workbench, nhấn vào dấu (+) để tạo kết nối mới
-![Hình]((./illusimage/localhostimg/image19.png))
+**Bước 5:** Kết nối cơ sở dữ liệu  
+Mở MySQL Workbench, nhấn vào dấu (+) để tạo kết nối mới  
+![Hình](./illusimage/localhostimg/image19.png)  
 Nhập hostname là 127.0.0.1, username là userStrapi, port là 3306, connection name đặt tên tùy ý  
-Chọn "Test Connection" và nhập mật khẩu là user123
-![Hình](./illusimage/localhostimg/image20.png)
-Cửa sổ hiện ra gõ và chạy lệnh `create database dbStrapi` để tạo cơ sở dữ liệu dbStrapi
-![Hình](illusimage/localhostimg/image21.png)
+Chọn "Test Connection" và nhập mật khẩu là user123  
+![Hình](./illusimage/localhostimg/image20.png)  
+Cửa sổ hiện ra gõ và chạy lệnh `create database dbStrapi` để tạo cơ sở dữ liệu dbStrapi  
+![Hình](illusimage/localhostimg/image21.png)  
 
 **Bước 6:** Quay lại cửa sổ dòng lệnh của Visual Studio Code, và nhập lần lượt các câu lệnh:
 ```bash
