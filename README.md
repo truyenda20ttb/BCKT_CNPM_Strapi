@@ -38,7 +38,7 @@ Với:
 - Màn hình hiện ra sau khi thiết lập  
 ![Alt text](illusimage/localhostimg/image8.png)  
 
-**Bước 4:** Cài đặt MySQL (tải tại [đây](https://dev.mysql.com/downloads/file/?id=518835)) và thiết lập cấu hình cơ sở dữ liệu  
+**Bước 4:** Cài đặt gói MySQL (tải tại [đây](https://dev.mysql.com/downloads/file/?id=518835)) và thiết lập cấu hình cơ sở dữ liệu  
 Tất cả để giá trị mặc định ngoại trừ các thông số sau:  
 -	Authentication Method: chọn "Use Legacy Authentication Method"  
 ![Hình](./illusimage/localhostimg/image10.png)  
@@ -59,9 +59,10 @@ Cửa sổ hiện ra gõ và chạy lệnh `create database dbStrapi` để tạ
 cd strapi-project
 npm run develop
 ```
-![Hình](illusimage/localhostimg/image22.png)
-Kết quả
-![Hình](illusimage/localhostimg/image23.png)
+![Hình](illusimage/localhostimg/image22.png)  
+Kết quả  
+![Hình](illusimage/localhostimg/image23.png)  
+
 **Bước 7:** Truy cập ứng dụng theo đường dẫn http://localhost:1337/, thực hiện tạo tài khoản và đăng nhập vào ứng dụng.
 
 ## Dockerize ứng dụng:
@@ -175,13 +176,17 @@ const client = env('DATABASE_CLIENT', 'mysql');
 ```bash
 docker-compose up -d
 ```
-**Bước 6 (không bắt buộc):** Kiểm tra kết nối đến cơ sở dữ liệu MySQl
-Vào MySQL Workbench, chọn New Connection.  
 
-Nhập các thông tin như đẫ thiết lập trong file docker-compose.yml và đặt tên cho kết nối.  
+Kết quả sau khi chạy:  
+![Hình](./illusimage/dockerimg/image2.png)  
 
+**Bước 6 (không bắt buộc):** Kiểm tra kết nối đến cơ sở dữ liệu MySQL  
+Vào MySQL Workbench, nhấn vào dấu (+) để tạo kết nối mới  
+Nhập các thông tin như đã thiết lập trong file docker-compose.yml và đặt tên cho kết nối  
+![Alt text](./illusimage/dockerimg/image3.png)  
 Kiểm tra  
-
+![Alt text](./illusimage/dockerimg/image4.png)  
 Nhấn vào kết nối, ta thấy cơ sở dữ liệu dbStrapi đã được tạo sẵn qua quá trình xây dựng container, nghĩa là thiết lập thành công.  
+![Alt text](./illusimage/dockerimg/image5.png)  
 
 **Bước 7:** Truy cập theo đường dẫn http://localhost:1337/, thực hiện tạo tài khoản và đăng nhập vào ứng dụng.
